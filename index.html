@@ -226,6 +226,43 @@
       .topbar{ position: static; }
       .brand{ min-width: unset; }
     }
+    /* --- Photo layout in About section --- */
+.heroFlex{
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.heroPhoto img{
+  width: 180px;
+  height: 180px;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  display: block;
+}
+
+.heroText{
+  min-width: 0;
+}
+
+/* Mobile */
+@media (max-width: 700px){
+  .heroFlex{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .heroPhoto img{
+    margin: 0 auto;
+  }
+  .heroMain p{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
   </style>
 </head>
 
@@ -254,28 +291,30 @@
     <!-- Hero -->
     <div class="hero">
       <section class="card heroMain" id="about">
-        <div class="heroFlex">
-  <div class="heroPhoto">
-    <img src="profile.jpg" alt="Subekshya Luitel">
-  </div>
-  <div class="heroText">
-        <div class="kicker"><span class="dot"></span>Healthcare Research • Clinical Trials • Health Systems</div>
-        <h2>Healthcare researcher working on clinical trials, critical care, quality improvement, and healthcare management.</h2>
-        <p>
-          I am a healthcare researcher with experience in clinical trials, critical care, and healthcare management.
-          My interests include global health, health system research, quality improvement, epidemiology, and infectious diseases.
-        </p>
+  <div class="heroFlex">
+    <div class="heroPhoto">
+      <img src="profile.jpg" alt="Subekshya Luitel">
+    </div>
 
-        <div class="btnRow">
-          <a class="btn btnPrimary" href="mailto:luitelsubekshya@gmail.com">Email</a>
-          <a class="btn" href="mailto:subekshyaluitel@nicrfnepal.org.np">NICRF Email</a>
-          <a class="btn" href="tel:+9779841141812">Call</a>
-          <a class="btn" href="https://scholar.google.com/citations?pli=1&authuser=1&user=QwYBoEEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-          <a class="btn" href="https://orcid.org/0009-0005-0423-8926" target="_blank" rel="noopener">ORCID</a>
-        </div>
+    <div class="heroText">
+      <div class="kicker"><span class="dot"></span>Healthcare Research • Clinical Trials • Health Systems</div>
+      <h2>Healthcare researcher working on clinical trials, critical care, quality improvement, and healthcare management.</h2>
+      <p>
+        I am a healthcare researcher with experience in clinical trials, critical care, and healthcare management.
+        My interests include global health, health system research, quality improvement, epidemiology, and infectious diseases.
+      </p>
+
+      <div class="btnRow">
+        <a class="btn btnPrimary" href="mailto:luitelsubekshya@gmail.com">Email</a>
+        <a class="btn" href="mailto:subekshyaluitel@nicrfnepal.org.np">NICRF Email</a>
+        <a class="btn" href="tel:+9779841141812">Call</a>
+        <a class="btn" href="https://scholar.google.com/citations?pli=1&authuser=1&user=QwYBoEEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn" href="https://orcid.org/0009-0005-0423-8926" target="_blank" rel="noopener">ORCID</a>
       </div>
-</div>
-      </section>
+    </div>
+  </div>
+</section>
+
 
       <aside class="card heroSide" aria-label="Quick facts">
         <div class="mini">
