@@ -175,6 +175,320 @@
       border-bottom: 1px solid var(--line);
       margin-bottom: 14px;
     }
-    
+    .sectionHeader h3{ margin:0; font-size: 16px; letter-spacing: 0.2px; }
+    .sectionHeader p{ margin:0; font-size: 12px; color: var(--muted2); }
+
+    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .item{
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.03);
+    }
+    .item h4{ margin:0 0 6px; font-size: 14px; }
+    .item .sub{ margin:0 0 6px; color: var(--muted2); font-size: 12.5px; }
+    .item ul{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: 13.5px; }
+    .item li{ margin-bottom: 6px; }
+
+    .chips{ display:flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .chip{
+      font-size: 12px;
+      color: rgba(255,255,255,0.85);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+
+    .pub{
+      display:flex; flex-direction: column; gap: 6px;
+      padding: 14px;
+      border-radius: var(--radius2);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      margin-bottom: 10px;
+    }
+    .pub .year{ font-size: 12px; color: var(--muted2); }
+    .pub .title{ font-size: 13.5px; font-weight: 650; }
+    .pub .role{ font-size: 12.5px; color: var(--muted); }
+
+    .footer{
+      margin-top: 22px;
+      text-align:center;
+      color: var(--muted2);
+      font-size: 12.5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+      .grid2{ grid-template-columns: 1fr; }
+      .topbar{ position: static; }
+      .brand{ min-width: unset; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Top Bar -->
+    <div class="topbar">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <h1>Subekshya Luitel</h1>
+          <p>Research Project Manager • Clinical Trials • Critical Care</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Site navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#conferences">Conferences</a>
+        <a href="#skills">Skills</a>
+      </nav>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <section class="card heroMain" id="about">
+        <div class="kicker"><span class="dot"></span>Healthcare Research • Clinical Trials • Health Systems</div>
+        <h2>Healthcare researcher working on clinical trials, critical care, quality improvement, and healthcare management.</h2>
+        <p>
+          I am a healthcare researcher with experience in clinical trials, critical care, and healthcare management.
+          My interests include global health, health system research, quality improvement, epidemiology, and infectious diseases.
+        </p>
+
+        <div class="btnRow">
+          <a class="btn btnPrimary" href="mailto:luitelsubekshya@gmail.com">Email</a>
+          <a class="btn" href="mailto:subekshyaluitel@nicrfnepal.org.np">NICRF Email</a>
+          <a class="btn" href="tel:+9779841141812">Call</a>
+          <a class="btn" href="https://scholar.google.com/citations?pli=1&authuser=1&user=QwYBoEEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn" href="https://orcid.org/0009-0005-0423-8926" target="_blank" rel="noopener">ORCID</a>
+        </div>
+      </section>
+
+      <aside class="card heroSide" aria-label="Quick facts">
+        <div class="mini">
+          <h3>Affiliation</h3>
+          <p>Nepal Intensive Care Research Foundation (NICRF)</p>
+        </div>
+
+        <div class="mini">
+          <h3>Location</h3>
+          <p>Bansbari, Kathmandu-3, Bagmati Province, Nepal</p>
+        </div>
+
+        <div class="mini">
+          <h3>Highlights</h3>
+          <ul class="metaList">
+            <li><span>Role:</span> Research Project Manager (2020–Present)</li>
+            <li><span>Trial:</span> National coordinator, REMAP-CAP (Nepal)</li>
+            <li><span>Registry:</span> Implementation manager, ICU Registry</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Experience -->
+    <section class="card section" id="experience">
+      <div class="sectionHeader">
+        <h3>Professional Experience</h3>
+        <p>Key roles and responsibilities</p>
+      </div>
+
+      <div class="item">
+        <h4>Research Project Manager — Nepal Intensive Care Research Foundation (NICRF)</h4>
+        <p class="sub">Bansbari, Kathmandu, Nepal • April 2020 – Present</p>
+        <ul>
+          <li>National research coordinator for the REMAP-CAP clinical trial; support operationalization and monitoring across Nepal with national PI and site coordinators.</li>
+          <li>Implementation manager for the ICU Registry Project; lead and oversee implementation, protocol adherence, coordination, and resource management.</li>
+          <li>Research manager across multiple projects; coordinate execution, compliance, collaboration with national/international stakeholders, and manuscript preparation.</li>
+        </ul>
+      </div>
+
+      <div class="item" style="margin-top: 12px;">
+        <h4>Research Assistant (Ph.D. Scholar collaboration) — Brown University, USA</h4>
+        <p class="sub">December 2019 – December 2020</p>
+        <ul>
+          <li>Supported interview guide design, ethical approvals, stakeholder coordination, interviews, and transcription.</li>
+        </ul>
+      </div>
+
+      <div class="item" style="margin-top: 12px;">
+        <h4>Executive (ICU Administration) — Nepal Mediciti Hospital</h4>
+        <p class="sub">June 2018 – November 2019</p>
+        <ul>
+          <li>Managed and improved daily administrative operations in ICU; facilitated communication, prepared reports, supported research, and supported admissions/transfers.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="card section" id="education">
+      <div class="sectionHeader">
+        <h3>Education</h3>
+        <p>Academic background</p>
+      </div>
+
+      <div class="grid2">
+        <div class="item">
+          <h4>Masters of Health Care Management</h4>
+          <p class="sub">National Open College, Pokhara University • 2018 • CGPA 3.98</p>
+          <div class="chips">
+            <span class="chip">Health economics</span>
+            <span class="chip">Strategic management</span>
+            <span class="chip">Program management</span>
+            <span class="chip">Quality management</span>
+            <span class="chip">Health care evaluation</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <h4>Post-Graduate in Health Care Management</h4>
+          <p class="sub">National Open College, Pokhara University • 2016 • CGPA 3.97</p>
+          <div class="chips">
+            <span class="chip">Health systems & policy</span>
+            <span class="chip">Economics & finance</span>
+            <span class="chip">Epidemiology</span>
+            <span class="chip">Biostatistics</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <h4>BSc in Microbiology</h4>
+          <p class="sub">St. Xavier’s College, Tribhuvan University • 2014</p>
+          <div class="chips">
+            <span class="chip">Microbiology</span>
+            <span class="chip">Infectious diseases</span>
+            <span class="chip">Laboratory science</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <h4>Awards & Internship</h4>
+          <p class="sub">Selected achievements</p>
+          <ul>
+            <li>Dean’s list (Pokhara University), 2018.</li>
+            <li>Internship: Ganeshman Singh Memorial Hospital (2018) and Vayodha Hospital (2016).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="card section" id="publications">
+      <div class="sectionHeader">
+        <h3>Publications (Selected)</h3>
+        <p>From CV list</p>
+      </div>
+
+      <div class="pub">
+        <div class="year">2023</div>
+        <div class="title">Intravenous vitamin C for patients hospitalized with COVID-19: two harmonized randomized clinical trials (JAMA)</div>
+        <div class="role">Role: Collaborator; REMAP-CAP investigator</div>
+      </div>
+
+      <div class="pub">
+        <div class="year">2023</div>
+        <div class="title">Determinants of Implementation of a Critical Care Registry in Asia: Lessons from a Qualitative Study (JMIR)</div>
+        <div class="role">Role: Collaborator; investigator</div>
+      </div>
+
+      <div class="pub">
+        <div class="year">2022</div>
+        <div class="title">Effect of Antiplatelet Therapy on Survival and Organ Support-Free Days in Critically Ill Patients With COVID-19: A Randomized Clinical Trial (JAMA)</div>
+        <div class="role">Role: Collaborator; REMAP-CAP investigator</div>
+      </div>
+
+      <div class="pub">
+        <div class="year">2021</div>
+        <div class="title">Interleukin-6 Receptor Antagonists in Critically Ill Patients with Covid-19 (The New England Journal of Medicine)</div>
+        <div class="role">Role: Collaborator; REMAP-CAP investigator</div>
+      </div>
+
+      <div class="pub">
+        <div class="year">2023</div>
+        <div class="title">Critical Care Services in Bagmati Province of Nepal: A Cross Sectional Survey (Wellcome Open Research)</div>
+        <div class="role">Role: Co-author</div>
+      </div>
+
+      <p style="margin: 12px 0 0; color: var(--muted); font-size: 13px;">
+        Tip: You can add full citations + DOI links later (your CV already lists them).
+      </p>
+    </section>
+
+    <!-- Conferences -->
+    <section class="card section" id="conferences">
+      <div class="sectionHeader">
+        <h3>Conferences & Research in Progress</h3>
+        <p>Highlights</p>
+      </div>
+
+      <div class="grid2">
+        <div class="item">
+          <h4>Conferences (Selected)</h4>
+          <ul>
+            <li>Social health insurance scheme as a way to universal health coverage: evidence from Nepal — CUGH 2021 Virtual Conference (co-author).</li>
+            <li>Health related quality of life among ICU survivors over 1 year after discharge — RFCCN-SAARC / CCAN 2019 (co-author).</li>
+            <li>Early ICU readmission: Incidence, Etiology and Outcome — RFCCN-SAARC / CCAN 2019 (co-author).</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h4>Research in Progress</h4>
+          <ul>
+            <li>Comparison of clinical characteristics and outcomes between COVID-19 survivors and non-survivors (co-author).</li>
+            <li>Empiric gram negative antibiotics usage among critically ill patients across 14 ICUs of Nepal (co-author).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills / Training -->
+    <section class="card section" id="skills">
+      <div class="sectionHeader">
+        <h3>Training & Languages</h3>
+        <p>Professional development</p>
+      </div>
+
+      <div class="grid2">
+        <div class="item">
+          <h4>Training</h4>
+          <div class="chips">
+            <span class="chip">Basic Life Support (BLS)</span>
+            <span class="chip">Human Resource & Admin Skills</span>
+            <span class="chip">Power BI: Data Visualization</span>
+            <span class="chip">Health Research Methodology (10.5 credit)</span>
+            <span class="chip">Good Clinical Practice (GCP) courses</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <h4>Languages</h4>
+          <div class="chips">
+            <span class="chip">Nepali — Native</span>
+            <span class="chip">English — Fluent</span>
+            <span class="chip">Hindi — Fluent</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>© <span id="yr"></span> Subekshya Luitel • Kathmandu, Nepal</p>
+      <p style="margin-top: 6px;">Built with GitHub Pages • Single-file HTML</p>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
 
 
