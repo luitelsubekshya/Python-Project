@@ -6,7 +6,12 @@
   <title>Subekshya Luitel | Research Project Manager</title>
   <meta name="description" content="Subekshya Luitel — Healthcare researcher with experience in clinical trials, critical care, and healthcare management in Nepal." />
 
-  <style>
+  <style> 
+    #about .kicker { border-color: var(--accent-blue); }
+#experience .sectionHeader h3 { color: var(--accent-purple); }
+#education .sectionHeader h3 { color: var(--accent-teal); }
+#publications .sectionHeader h3 { color: var(--accent-amber); }
+
     :root{
       --bg: #0f1b17;
       --card: rgba(255,255,255,0.06);
@@ -22,6 +27,10 @@
       --radius2: 14px;
       --max: 1180px;
     }
+--accent-blue: #4f8cff;
+--accent-purple: #a78bfa;
+--accent-teal: #2dd4bf;
+--accent-amber: #fbbf24;
 
     *{ box-sizing: border-box; }
     html, body { height: 100%; }
@@ -109,10 +118,14 @@
       border-radius: 999px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,0.03);
-    }
     .dot{
-      width: 9px; height: 9px; border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background: linear-gradient(135deg,
+    var(--accent-blue),
+    var(--accent-purple),
+    var(--accent-teal)
+  );
+}
+
       box-shadow: 0 0 0 6px rgba(110,231,255,0.10);
     }
     .heroMain h2{
@@ -339,9 +352,22 @@
     <!-- Experience -->
     <section class="card section" id="experience">
       <div class="sectionHeader">
-        <h3>Professional Experience</h3>
+       <h3>What I Work On</h3>
         <p>Key roles and responsibilities</p>
       </div>
+<div class="grid2" style="margin-bottom:24px;">
+  <div class="item">
+    <h4>ICU Registry Implementation</h4>
+    <p class="sub">National-level digital health infrastructure</p>
+    <p>Led implementation and coordination of ICU registry systems across multiple hospitals in Nepal, supporting quality improvement and research.</p>
+  </div>
+
+  <div class="item">
+    <h4>Clinical Trial Coordination (REMAP-CAP)</h4>
+    <p class="sub">Adaptive platform trial • Nepal</p>
+    <p>Coordinated national trial operations, regulatory processes, and multi-site collaboration for a global adaptive clinical trial.</p>
+  </div>
+</div>
 
       <div class="item">
         <h4>Research Project Manager — Nepal Intensive Care Research Foundation (NICRF)</h4>
