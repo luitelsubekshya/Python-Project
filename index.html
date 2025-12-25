@@ -13,20 +13,26 @@
 #publications .sectionHeader h3 { color: var(--accent-amber); }
 
     :root{
-      --bg: #0f1b17;
-      --card: rgba(255,255,255,0.06);
-      --card2: rgba(255,255,255,0.08);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.7);
-      --muted2: rgba(255,255,255,0.55);
-      --accent: #4ade80;
-      --accent2: #22c55e;
-      --line: rgba(255,255,255,0.12);
-      --shadow: 0 18px 60px rgba(0,0,0,0.35);
-      --radius: 18px;
-      --radius2: 14px;
-      --max: 1180px;
-    }
+  --bg: #0b1020;
+  --card: rgba(255,255,255,0.08);
+  --card2: rgba(255,255,255,0.10);
+  --text: rgba(255,255,255,0.94);
+  --muted: rgba(255,255,255,0.74);
+  --muted2: rgba(255,255,255,0.58);
+  --line: rgba(255,255,255,0.14);
+  --shadow: 0 18px 60px rgba(0,0,0,0.35);
+
+  /* Multicolor accents */
+  --a1: #60a5fa; /* blue */
+  --a2: #a78bfa; /* purple */
+  --a3: #34d399; /* green */
+  --a4: #fbbf24; /* amber */
+
+  --radius: 18px;
+  --radius2: 14px;
+  --max: 1120px;
+}
+
 --accent-blue: #4f8cff;
 --accent-purple: #a78bfa;
 --accent-teal: #2dd4bf;
@@ -39,10 +45,12 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color: var(--text);
       background:
-        radial-gradient(1200px 600px at 15% 10%, rgba(110,231,255,0.20), transparent 60%),
-        radial-gradient(900px 520px at 90% 20%, rgba(167,139,250,0.20), transparent 55%),
-        radial-gradient(900px 520px at 40% 95%, rgba(34,197,94,0.12), transparent 55%),
-        var(--bg);
+  radial-gradient(900px 600px at 12% 10%, rgba(96,165,250,0.20), transparent 60%),
+  radial-gradient(900px 600px at 90% 15%, rgba(167,139,250,0.18), transparent 55%),
+  radial-gradient(900px 600px at 40% 95%, rgba(52,211,153,0.16), transparent 55%),
+  radial-gradient(700px 500px at 60% 45%, rgba(251,191,36,0.10), transparent 55%),
+  var(--bg);
+
       line-height: 1.6;
     }
 
@@ -97,19 +105,20 @@
     }
 
     /* Hero */
-    .hero{ margin-top: 40px; }
+    .hero{ margin-top: 34px; }
       display:grid;
       grid-template-columns: 1.2fr 0.8fr;
       gap: 16px;
       align-items: stretch;
     }
     .card{
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--card);
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
-    }
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06));
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 70px rgba(0,0,0,0.35);
+}
+
     .heroMain{ padding: 22px; }
     .kicker{
       display:inline-flex; align-items:center; gap: 8px;
@@ -129,17 +138,25 @@
       box-shadow: 0 0 0 6px rgba(110,231,255,0.10);
     }
     .heroMain h2{
-      margin: 12px 0 8px;
-      font-size: clamp(26px, 3.4vw, 40px);
-      line-height: 1.15;
-      letter-spacing: -0.4px;
-    }
+  margin: 12px 0 10px;
+  font-size: clamp(22px, 3.0vw, 34px);
+  line-height: 1.18;
+  letter-spacing: -0.3px;
+}
+
     .heroMain p{
   margin: 0 0 22px;
   font-size: 15.5px;
   line-height: 1.75;
 }
 
+.btnPrimary{
+  border-color: transparent;
+  background: linear-gradient(135deg, rgba(96,165,250,0.35), rgba(167,139,250,0.35));
+}
+.btn:hover{
+  box-shadow: 0 14px 30px rgba(96,165,250,0.10);
+}
 
     .btnRow{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
     .btn{
@@ -180,7 +197,7 @@
     .metaList span{ color: var(--text); font-weight: 600; }
 
     /* Sections */
-    .section{ margin-top: 32px; padding: 32px; }
+    .section{ margin-top: 32px; padding: 28px; }
     .sectionHeader{
       display:flex; justify-content: space-between; align-items: baseline; gap: 10px;
       padding-bottom: 10px;
