@@ -6,577 +6,800 @@
   <title>Subekshya Luitel | Research Project Manager</title>
   <meta name="description" content="Subekshya Luitel — Healthcare researcher with experience in clinical trials, critical care, and healthcare management in Nepal." />
 
-  <style> 
-    #about .kicker { border-color: var(--accent-blue); }
-#experience .sectionHeader h3 { color: var(--accent-purple); }
-#education .sectionHeader h3 { color: var(--accent-teal); }
-#publications .sectionHeader h3 { color: var(--accent-amber); }
+  <style>
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #64748b;
+      --accent: #3b82f6;
+      --accent-light: #dbeafe;
+      --accent-dark: #1e40af;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
 
-    :root{
-  --bg: #0b1020;
-  --card: rgba(255,255,255,0.08);
-  --card2: rgba(255,255,255,0.10);
-  --text: rgba(255,255,255,0.94);
-  --muted: rgba(255,255,255,0.74);
-  --muted2: rgba(255,255,255,0.58);
-  --line: rgba(255,255,255,0.14);
-  --shadow: 0 18px 60px rgba(0,0,0,0.35);
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  /* Multicolor accents */
-  --a1: #60a5fa; /* blue */
-  --a2: #a78bfa; /* purple */
-  --a3: #34d399; /* green */
-  --a4: #fbbf24; /* amber */
+    html {
+      scroll-behavior: smooth;
+    }
 
-  --radius: 18px;
-  --radius2: 14px;
-  --max: 1120px;
-}
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-primary);
+      background: var(--bg-secondary);
+      line-height: 1.6;
+      font-size: 16px;
+    }
 
---accent-blue: #4f8cff;
---accent-purple: #a78bfa;
---accent-teal: #2dd4bf;
---accent-amber: #fbbf24;
+    /* Navigation */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
 
-    *{ box-sizing: border-box; }
-    html, body { height: 100%; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color: var(--text);
-      background:
-  radial-gradient(900px 600px at 12% 10%, rgba(96,165,250,0.20), transparent 60%),
-  radial-gradient(900px 600px at 90% 15%, rgba(167,139,250,0.18), transparent 55%),
-  radial-gradient(900px 600px at 40% 95%, rgba(52,211,153,0.16), transparent 55%),
-  radial-gradient(700px 500px at 60% 45%, rgba(251,191,36,0.10), transparent 55%),
-  var(--bg);
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
+    .nav-brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 4rem 0 5rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .hero-text h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-text .subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      opacity: 0.95;
+      font-weight: 500;
+    }
+
+    .hero-text .description {
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--accent-dark);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Info Cards */
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: -3rem;
+      margin-bottom: 4rem;
+    }
+
+    .info-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+
+    .info-card h3 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .info-card ul {
+      list-style: none;
+      margin-top: 0.75rem;
+    }
+
+    .info-card li {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      padding: 0.4rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .info-card li strong {
+      color: var(--text-primary);
+    }
+
+    /* Section */
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Card */
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .card .meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .card p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .card li {
+      color: var(--text-secondary);
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
       line-height: 1.6;
     }
 
-    a{ color: inherit; text-decoration: none; }
-    a:hover{ text-decoration: underline; text-underline-offset: 3px; }
-    .wrap{ max-width: var(--max); margin: 0 auto; padding: 26px 18px 70px; }
-
-    /* Top bar */
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap: 12px;
-      padding: 14px 16px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.04);
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
-      position: sticky;
-      top: 14px;
-      z-index: 99;
-    }
-    .brand{ display:flex; gap: 10px; align-items:center; min-width: 200px; }
-    .avatar{
-      width: 38px; height: 38px; border-radius: 12px;
-      background:
-        linear-gradient(135deg, rgba(110,231,255,0.9), rgba(167,139,250,0.9));
-      box-shadow: 0 10px 30px rgba(110,231,255,0.15);
-      position: relative;
-      overflow:hidden;
-    }
-    .avatar::after{
-      content:"";
-      position:absolute; inset:-50%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.5), transparent 45%);
-      transform: rotate(20deg);
-    }
-    .brand h1{ font-size: 14px; margin: 0; letter-spacing: 0.3px; }
-    .brand p{ margin: 0; font-size: 12px; color: var(--muted2); }
-
-    .nav{ display:flex; gap: 12px; flex-wrap: wrap; justify-content:flex-end; }
-    .nav a{
-      font-size: 12px;
-      color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid transparent;
-    }
-    .nav a:hover{
-      border-color: var(--line);
-      background: rgba(255,255,255,0.04);
-      text-decoration:none;
+    .card li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
     }
 
-    /* Hero */
-    .hero{ margin-top: 34px; }
-      display:grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 16px;
-      align-items: stretch;
+    /* Tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
     }
-    .card{
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius);
-  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06));
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 70px rgba(0,0,0,0.35);
-}
 
-    .heroMain{ padding: 22px; }
-    .kicker{
-      display:inline-flex; align-items:center; gap: 8px;
-      font-size: 12px; color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-    .dot{
-  background: linear-gradient(135deg,
-    var(--accent-blue),
-    var(--accent-purple),
-    var(--accent-teal)
-  );
-}
-
-      box-shadow: 0 0 0 6px rgba(110,231,255,0.10);
-    }
-    .heroMain h2{
-  margin: 12px 0 10px;
-  font-size: clamp(22px, 3.0vw, 34px);
-  line-height: 1.18;
-  letter-spacing: -0.3px;
-}
-
-    .heroMain p{
-  margin: 0 0 22px;
-  font-size: 15.5px;
-  line-height: 1.75;
-}
-
-.btnPrimary{
-  border-color: transparent;
-  background: linear-gradient(135deg, rgba(96,165,250,0.35), rgba(167,139,250,0.35));
-}
-.btn:hover{
-  box-shadow: 0 14px 30px rgba(96,165,250,0.10);
-}
-
-    .btnRow{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap: 8px;
-      padding: 11px 14px;
+    .tag {
+      padding: 0.4rem 0.9rem;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      border-radius: 50px;
+      font-size: 0.85rem;
       font-weight: 600;
-      font-size: 13px;
+    }
+
+    /* Publications */
+    .publication {
+      background: white;
+      padding: 1.75rem;
       border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-      text-decoration:none;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(255,255,255,0.18);
-      text-decoration:none;
-    }
-    .btnPrimary{
-      border-color: transparent;
-      background: linear-gradient(135deg, rgba(110,231,255,0.24), rgba(167,139,250,0.24));
+      border: 1px solid var(--border);
+      margin-bottom: 1.25rem;
+      transition: all 0.2s;
     }
 
-    .heroSide{ padding: 18px; display:flex; flex-direction: column; gap: 12px; }
-    .mini{
-      border: 1px solid var(--line);
-      border-radius: var(--radius2);
-      padding: 14px;
-      background: rgba(255,255,255,0.04);
-    }
-    .mini h3{ margin: 0 0 8px; font-size: 13px; letter-spacing: 0.2px; }
-    .mini p{ margin: 0; font-size: 13px; color: var(--muted); }
-    .metaList{ margin: 10px 0 0; padding: 0; list-style:none; display:grid; gap: 8px; }
-    .metaList li{ font-size: 13px; color: var(--muted); }
-    .metaList span{ color: var(--text); font-weight: 600; }
-
-    /* Sections */
-    .section{ margin-top: 32px; padding: 28px; }
-    .sectionHeader{
-      display:flex; justify-content: space-between; align-items: baseline; gap: 10px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--line);
-      margin-bottom: 14px;
-    }
-    .sectionHeader h3{ margin:0; font-size: 16px; letter-spacing: 0.2px; }
-    .sectionHeader p{ margin:0; font-size: 12px; color: var(--muted2); }
-
-    .grid2{ display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .item{ padding: 22px; }
-      border: 1px solid var(--line);
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,0.03);
-    }
-    .item h4{ margin:0 0 6px; font-size: 14px; }
-    .item .sub{ margin:0 0 6px; color: var(--muted2); font-size: 12.5px; }
-    .item ul{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: 13.5px; }
-    .item li{ margin-bottom: 6px; }
-
-    .chips{ display:flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-    .chip{
-      font-size: 12px;
-      color: rgba(255,255,255,0.85);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      padding: 7px 10px;
-      border-radius: 999px;
+    .publication:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
     }
 
-    .pub{
-      display:flex; flex-direction: column; gap: 6px;
-      padding: 14px;
-      border-radius: var(--radius2);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      margin-bottom: 10px;
+    .publication .year {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
     }
-    .pub .year{ font-size: 12px; color: var(--muted2); }
-    .pub .title{ font-size: 13.5px; font-weight: 650; }
-    .pub .role{ font-size: 12.5px; color: var(--muted); }
 
-    .footer{
-      margin-top: 22px;
-      text-align:center;
-      color: var(--muted2);
-      font-size: 12.5px;
+    .publication .title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .publication .role {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .publication .role a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .publication .role a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--text-primary);
+      color: white;
+      padding: 3rem 0;
+      margin-top: 5rem;
+      text-align: center;
+    }
+
+    .footer p {
+      opacity: 0.8;
+      margin: 0.5rem 0;
     }
 
     /* Responsive */
-    @media (max-width: 900px){
-      .hero{ grid-template-columns: 1fr; }
-      .grid2{ grid-template-columns: 1fr; }
-      .topbar{ position: static; }
-      .brand{ min-width: unset; }
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .hero-image {
+        margin: 0 auto;
+        width: 160px;
+        height: 160px;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .hero-badges,
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .section-header h2 {
+        font-size: 1.75rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
-    /* --- Photo layout in About section --- */
-.heroFlex{
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 32px;
-  align-items: start;
-}
 
-.heroPhoto img{
-  width: 180px;
-  height: 180px;
-  border-radius: 18px;
-  object-fit: cover;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  display: block;
-}
+    @media (max-width: 640px) {
+      .nav-container {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-.heroText{
-  min-width: 0;
-}
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
-/* Mobile */
-@media (max-width: 700px){
-  .heroFlex{
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .heroPhoto img{
-    margin: 0 auto;
-  }
-  .heroMain p{
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
+      .container {
+        padding: 0 1rem;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">Subekshya Luitel</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#conferences">Conferences</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Top Bar -->
-    <div class="topbar">
-      <div class="brand">
-        <div class="avatar" aria-hidden="true"></div>
-        <div>
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-content">
+        <img src="profile.jpg" alt="Subekshya Luitel" class="hero-image">
+        <div class="hero-text">
           <h1>Subekshya Luitel</h1>
-          <p>Research Project Manager • Clinical Trials • Critical Care</p>
+          <p class="subtitle">Research Project Manager • Clinical Trials • Critical Care</p>
+          <p class="description">
+            Healthcare researcher with substantial experience in clinical trials, critical care, and healthcare management. 
+            Research interests include global health, health system research, quality improvement, epidemiology, and infectious diseases. 
+            Published in JAMA, The New England Journal of Medicine, and other prestigious peer-reviewed journals.
+          </p>
+          <div class="hero-badges">
+            <span class="badge">Clinical Trials</span>
+            <span class="badge">Critical Care</span>
+            <span class="badge">Health Systems</span>
+            <span class="badge">Quality Improvement</span>
+          </div>
+          <div class="hero-buttons">
+            <a href="mailto:luitelsubekshya@gmail.com" class="btn btn-primary">Get in Touch</a>
+            <a href="https://scholar.google.com/citations?pli=1&authuser=1&user=QwYBoEEAAAAJ" target="_blank" class="btn btn-secondary">Google Scholar</a>
+            <a href="https://orcid.org/0009-0005-0423-8926" target="_blank" class="btn btn-secondary">ORCID</a>
+          </div>
         </div>
       </div>
-      <nav class="nav" aria-label="Site navigation">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#publications">Publications</a>
-        <a href="#conferences">Conferences</a>
-        <a href="#skills">Skills</a>
-      </nav>
     </div>
+  </section>
 
-    <!-- Hero -->
-    <div class="hero">
-      <section class="card heroMain" id="about">
-  <div class="heroFlex">
-    <div class="heroPhoto">
-      <img src="profile.jpg" alt="Subekshya Luitel">
+  <!-- Info Cards -->
+  <div class="container">
+    <div class="info-cards">
+      <div class="info-card">
+        <h3>Current Affiliation</h3>
+        <p>Nepal Intensive Care Research Foundation (NICRF)</p>
+      </div>
+      <div class="info-card">
+        <h3>Location</h3>
+        <p>Bansbari, Kathmandu-3, Bagmati Province, Nepal</p>
+      </div>
+      <div class="info-card">
+        <h3>Key Roles</h3>
+        <ul>
+          <li><span>REMAP-CAP</span> <strong>National Coordinator</strong></li>
+          <li><span>ICU Registry</span> <strong>Implementation Manager</strong></li>
+        </ul>
+      </div>
     </div>
+  </div>
 
-    <div class="heroText">
-      <div class="kicker"><span class="dot"></span>Healthcare Research • Clinical Trials • Health Systems</div>
-      <h2>Healthcare researcher working on clinical trials, critical care, quality improvement, and healthcare management.</h2>
-      <p>
-        I am a healthcare researcher with experience in clinical trials, critical care, and healthcare management.
-        My interests include global health, health system research, quality improvement, epidemiology, and infectious diseases.
+  <!-- Experience Section -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2>Professional Experience</h2>
+        <p>Key roles and contributions in healthcare research</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Research Project Manager</h3>
+          <p class="meta">Nepal Intensive Care Research Foundation • April 2020 – Present</p>
+          <ul>
+            <li>National research coordinator and investigator for REMAP-CAP clinical trial supporting operationalization and monitoring across Nepal</li>
+            <li>Implementation manager for ICU Registry Project leading all aspects of implementation, coordination, and resource management</li>
+            <li>Research manager overseeing multiple projects, ensuring execution, compliance, and collaboration with national/international stakeholders</li>
+            <li>Writing and preparing research manuscripts for publication</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Research Assistant</h3>
+          <p class="meta">Ph.D. Scholar, Brown University, USA • December 2019 – December 2020</p>
+          <ul>
+            <li>Assisted in interview guide design and obtaining ethical approvals</li>
+            <li>Coordinated with national and international stakeholders</li>
+            <li>Conducted interviews and transcribed data</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Executive (ICU Administration)</h3>
+          <p class="meta">Nepal Mediciti Hospital • June 2018 – November 2019</p>
+          <ul>
+            <li>Managed and improved daily administrative operations in hospital ICU</li>
+            <li>Facilitated communication among stakeholders and resolved issues</li>
+            <li>Prepared reports, ensured quality, and implemented policies</li>
+            <li>Supported research and oversaw admissions and transfers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section" id="education" style="background: white;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Education</h2>
+        <p>Academic qualifications and achievements</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Masters of Health Care Management</h3>
+          <p class="meta">National Open College, Pokhara University • 2018 • CGPA 3.98</p>
+          <p>Dean's List, 2018 — Recognition for outstanding academic achievement</p>
+          <div class="tags">
+            <span class="tag">Health Economics</span>
+            <span class="tag">Strategic Management</span>
+            <span class="tag">Program Management</span>
+            <span class="tag">Quality Management</span>
+            <span class="tag">Healthcare Evaluation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Post-Graduate of Health Care Management</h3>
+          <p class="meta">National Open College, Pokhara University • 2016 • CGPA 3.97</p>
+          <div class="tags">
+            <span class="tag">Health Systems & Policy</span>
+            <span class="tag">Economics & Finance</span>
+            <span class="tag">Epidemiology</span>
+            <span class="tag">Biostatistics</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>BSc in Microbiology</h3>
+          <p class="meta">St. Xavier's College, Tribhuvan University • 2014</p>
+          <div class="tags">
+            <span class="tag">Microbiology</span>
+            <span class="tag">Infectious Diseases</span>
+            <span class="tag">Laboratory Science</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section class="section" id="publications">
+    <div class="container">
+      <div class="section-header">
+        <h2>Publications</h2>
+        <p>Research contributions in peer-reviewed journals</p>
+      </div>
+
+      <div class="publication">
+        <span class="year">2025</span>
+        <div class="title">Critical Care Services in Bagmati Province of Nepal: A Cross Sectional Survey</div>
+        <div class="role">Wellcome Open Research • Co-author • <a href="https://wellcomeopenresearch.org/articles/8-575/v1" target="_blank">Link</a></div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2025</span>
+        <div class="title">Clinical Characteristics and Outcomes of Surgical Patients Admitted to Intensive Care Units</div>
+        <div class="role">Wellcome Open Research • Co-author • <a href="https://wellcomeopenresearch.org/articles/10-199" target="_blank">Link</a></div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2024</span>
+        <div class="title">Empiric gram negative antibiotics usage among critically ill patients across 14 ICUs of Nepal: A retrospective cohort study</div>
+        <div class="role">Wellcome Open Research • Co-author • <a href="https://wellcomeopenresearch.org/articles/9-573" target="_blank">Link</a></div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2024</span>
+        <div class="title">Comparison of clinical characteristics and outcomes between COVID-19 survivors and non-survivors: a retrospective observational study</div>
+        <div class="role">Wellcome Open Research • Co-author • <a href="https://wellcomeopenresearch.org/articles/9-204" target="_blank">Link</a></div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2024</span>
+        <div class="title">The burden of anxiety, depression, and stress, along with the prevalence of symptoms of PTSD, and perceptions of the drivers of psychological harms, as perceived by Doctors and Nurses working in ICUs in Nepal during the COVID-19 pandemic; a mixed method evaluation</div>
+        <div class="role">BMC Health Services Research • Co-author</div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2023</span>
+        <div class="title">Intravenous vitamin C for patients hospitalized with COVID-19: two harmonized randomized clinical trials</div>
+        <div class="role">JAMA • REMAP-CAP Investigator • <a href="https://doi.org/10.1001/jama.2023.21407" target="_blank">DOI</a></div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2023</span>
+        <div class="title">Epidemiology of critically ill patients in intensive care units in Nepal: a retrospective observational study</div>
+        <div class="role">Wellcome Open Research • Co-author • <a href="https://wellcomeopenresearch.org/articles/8-180" target="_blank">Link</a></div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2023</span>
+        <div class="title">Point-prevalence survey of antimicrobial use in intensive care units in Nepal</div>
+        <div class="role">Antimicrobial Stewardship & Healthcare Epidemiology • Co-author</div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2023</span>
+        <div class="title">Feasibility and acceptability of implementing a practice guideline for the use of high flow nasal cannula in critically ill patients who have hypoxemia: a multi-centre study in Nepal</div>
+        <div class="role">Wellcome Open Research • Co-author • <a href="https://wellcomeopenresearch.org/articles/8-196" target="_blank">Link</a></div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2022</span>
+        <div class="title">Effect of Antiplatelet Therapy on Survival and Organ Support-Free Days in Critically Ill Patients with COVID-19: A Randomized Clinical Trial</div>
+        <div class="role">JAMA • REMAP-CAP Investigator • <a href="https://doi.org/10.1001/jama.2022.2910" target="_blank">DOI</a></div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2021</span>
+        <div class="title">Operationalization of the Randomized Embedded Multifactorial Adaptive Platform for COVID-19 trials in a low and lower-middle income critical care learning health system</div>
+        <div class="role">Wellcome Open Research • Co-author • <a href="https://doi.org/10.12688/wellcomeopenres.16486.1" target="_blank">DOI</a></div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2021</span>
+        <div class="title">Therapeutic Anticoagulation with Heparin in Non-critically Ill Patients with Covid-19</div>
+        <div class="role">The New England Journal of Medicine • REMAP-CAP Investigator • <a href="https://doi.org/10.1056/NEJMoa2105911" target="_blank">DOI</a></div>
+      </div>
+
+      <div class="publication">
+        <span class="year">2021</span>
+        <div class="title">Therapeutic Anticoagulation with Heparin in Critically Ill Patients with Covid-19</div>
+        <div class="role">The New England Journal of Medicine • REMAP-CAP Investigator • <a href="https://doi.org/10.1056/nejmoa2103417" target="_blank">DOI</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conferences Section -->
+  <section class="section" id="conferences" style="background: white;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Conference Presentations</h2>
+        <p>Selected conference contributions</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Social health insurance scheme as a way to universal health coverage: Implementation evidence from Nepal</h3>
+          <p class="meta">CUGH (Consortium of Universities of Global Health) 2021 Virtual Conference</p>
+          <p>Role: Co-author</p>
+        </div>
+
+        <div class="card">
+          <h3>Health related quality of life among ICU survivors over 1 year after discharge</h3>
+          <p class="meta">Second conference of RFCCN-SAARC and second international conference of critical care nurses' association of Nepal • 2019</p>
+          <p>Role: Co-author</p>
+        </div>
+
+        <div class="card">
+          <h3>Early intensive care unit readmission: Incidence, Etiology and Outcome</h3>
+          <p class="meta">Second conference of RFCCN-SAARC and second international conference of critical care nurses' association of Nepal • 2019</p>
+          <p>Role: Co-author</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Training Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2>Skills & Training</h2>
+        <p>Professional development and competencies</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Professional Training</h3>
+          <div class="tags">
+            <span class="tag">Basic Life Support (BLS)</span>
+            <span class="tag">Good Clinical Practice (GCP)</span>
+            <span class="tag">Health Research Methodology (10.5 credit)</span>
+            <span class="tag">Power BI: Data Visualization</span>
+            <span class="tag">HR & Admin Skills</span>
+            <span class="tag">Clinical Research</span>
+            <span class="tag">Data Management</span>
+            <span class="tag">Informed Consent</span>
+            <span class="tag">Adverse Event Reporting</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Languages</h3>
+          <div class="tags">
+            <span class="tag">Nepali — Native</span>
+            <span class="tag">English — Fluent</span>
+            <span class="tag">Hindi — Fluent</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Internships</h3>
+          <p><strong>Ganeshman Singh Memorial Hospital</strong> (2018)</p>
+          <p><strong>Vayodha Hospital</strong> (2016)</p>
+          <p style="margin-top: 1rem; font-size: 0.95rem;">Prepared and presented comprehensive reports on hospital performance, functions, and operations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Subekshya Luitel</strong></p>
+      <p>Research Project Manager • Nepal Intensive Care Research Foundation</p>
+      <p>Bansbari, Kathmandu-3, Bagmati Province, Nepal</p>
+      <p style="margin-top: 1rem;">
+        <a href="mailto:luitelsubekshya@gmail.com" style="color: white; text-decoration: underline;">luitelsubekshya@gmail.com</a> | 
+        <a href="mailto:subekshyaluitel@nicrfnepal.org.np" style="color: white; text-decoration: underline;">subekshyaluitel@nicrfnepal.org.np</a>
       </p>
-
-      <div class="btnRow">
-        <a class="btn btnPrimary" href="mailto:luitelsubekshya@gmail.com">Email</a>
-        <a class="btn" href="mailto:subekshyaluitel@nicrfnepal.org.np">NICRF Email</a>
-        <a class="btn" href="tel:+9779841141812">Call</a>
-        <a class="btn" href="https://scholar.google.com/citations?pli=1&authuser=1&user=QwYBoEEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="btn" href="https://orcid.org/0009-0005-0423-8926" target="_blank" rel="noopener">ORCID</a>
-      </div>
+      <p style="margin-top: 1.5rem; font-size: 0.9rem;">© <span id="year"></span> All rights reserved</p>
     </div>
-  </div>
-</section>
-
-
-      <aside class="card heroSide" aria-label="Quick facts">
-        <div class="mini">
-          <h3>Affiliation</h3>
-          <p>Nepal Intensive Care Research Foundation (NICRF)</p>
-        </div>
-
-        <div class="mini">
-          <h3>Location</h3>
-          <p>Bansbari, Kathmandu-3, Bagmati Province, Nepal</p>
-        </div>
-
-        <div class="mini">
-          <h3>Highlights</h3>
-          <ul class="metaList">
-            <li><span>Role:</span> Research Project Manager (2020–Present)</li>
-            <li><span>Trial:</span> National coordinator, REMAP-CAP (Nepal)</li>
-            <li><span>Registry:</span> Implementation manager, ICU Registry</li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-
-    <!-- Experience -->
-    <section class="card section" id="experience">
-      <div class="sectionHeader">
-       <h3>What I Work On</h3>
-        <p>Key roles and responsibilities</p>
-      </div>
-<div class="grid2" style="margin-bottom:24px;">
-  <div class="item">
-    <h4>ICU Registry Implementation</h4>
-    <p class="sub">National-level digital health infrastructure</p>
-    <p>Led implementation and coordination of ICU registry systems across multiple hospitals in Nepal, supporting quality improvement and research.</p>
-  </div>
-
-  <div class="item">
-    <h4>Clinical Trial Coordination (REMAP-CAP)</h4>
-    <p class="sub">Adaptive platform trial • Nepal</p>
-    <p>Coordinated national trial operations, regulatory processes, and multi-site collaboration for a global adaptive clinical trial.</p>
-  </div>
-</div>
-
-      <div class="item">
-        <h4>Research Project Manager — Nepal Intensive Care Research Foundation (NICRF)</h4>
-        <p class="sub">Bansbari, Kathmandu, Nepal • April 2020 – Present</p>
-        <ul>
-          <li>National research coordinator for the REMAP-CAP clinical trial; support operationalization and monitoring across Nepal with national PI and site coordinators.</li>
-          <li>Implementation manager for the ICU Registry Project; lead and oversee implementation, protocol adherence, coordination, and resource management.</li>
-          <li>Research manager across multiple projects; coordinate execution, compliance, collaboration with national/international stakeholders, and manuscript preparation.</li>
-        </ul>
-      </div>
-
-      <div class="item" style="margin-top: 12px;">
-        <h4>Research Assistant (Ph.D. Scholar collaboration) — Brown University, USA</h4>
-        <p class="sub">December 2019 – December 2020</p>
-        <ul>
-          <li>Supported interview guide design, ethical approvals, stakeholder coordination, interviews, and transcription.</li>
-        </ul>
-      </div>
-
-      <div class="item" style="margin-top: 12px;">
-        <h4>Executive (ICU Administration) — Nepal Mediciti Hospital</h4>
-        <p class="sub">June 2018 – November 2019</p>
-        <ul>
-          <li>Managed and improved daily administrative operations in ICU; facilitated communication, prepared reports, supported research, and supported admissions/transfers.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="card section" id="education">
-      <div class="sectionHeader">
-        <h3>Education</h3>
-        <p>Academic background</p>
-      </div>
-
-      <div class="grid2">
-        <div class="item">
-          <h4>Masters of Health Care Management</h4>
-          <p class="sub">National Open College, Pokhara University • 2018 • CGPA 3.98</p>
-          <div class="chips">
-            <span class="chip">Health economics</span>
-            <span class="chip">Strategic management</span>
-            <span class="chip">Program management</span>
-            <span class="chip">Quality management</span>
-            <span class="chip">Health care evaluation</span>
-          </div>
-        </div>
-
-        <div class="item">
-          <h4>Post-Graduate in Health Care Management</h4>
-          <p class="sub">National Open College, Pokhara University • 2016 • CGPA 3.97</p>
-          <div class="chips">
-            <span class="chip">Health systems & policy</span>
-            <span class="chip">Economics & finance</span>
-            <span class="chip">Epidemiology</span>
-            <span class="chip">Biostatistics</span>
-          </div>
-        </div>
-
-        <div class="item">
-          <h4>BSc in Microbiology</h4>
-          <p class="sub">St. Xavier’s College, Tribhuvan University • 2014</p>
-          <div class="chips">
-            <span class="chip">Microbiology</span>
-            <span class="chip">Infectious diseases</span>
-            <span class="chip">Laboratory science</span>
-          </div>
-        </div>
-
-        <div class="item">
-          <h4>Awards & Internship</h4>
-          <p class="sub">Selected achievements</p>
-          <ul>
-            <li>Dean’s list (Pokhara University), 2018.</li>
-            <li>Internship: Ganeshman Singh Memorial Hospital (2018) and Vayodha Hospital (2016).</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Publications -->
-    <section class="card section" id="publications">
-      <div class="sectionHeader">
-        <h3>Publications (Selected)</h3>
-        <p>From CV list</p>
-      </div>
-
-      <div class="pub">
-        <div class="year">2023</div>
-        <div class="title">Intravenous vitamin C for patients hospitalized with COVID-19: two harmonized randomized clinical trials (JAMA)</div>
-        <div class="role">Role: Collaborator; REMAP-CAP investigator</div>
-      </div>
-
-      <div class="pub">
-        <div class="year">2023</div>
-        <div class="title">Determinants of Implementation of a Critical Care Registry in Asia: Lessons from a Qualitative Study (JMIR)</div>
-        <div class="role">Role: Collaborator; investigator</div>
-      </div>
-
-      <div class="pub">
-        <div class="year">2022</div>
-        <div class="title">Effect of Antiplatelet Therapy on Survival and Organ Support-Free Days in Critically Ill Patients With COVID-19: A Randomized Clinical Trial (JAMA)</div>
-        <div class="role">Role: Collaborator; REMAP-CAP investigator</div>
-      </div>
-
-      <div class="pub">
-        <div class="year">2021</div>
-        <div class="title">Interleukin-6 Receptor Antagonists in Critically Ill Patients with Covid-19 (The New England Journal of Medicine)</div>
-        <div class="role">Role: Collaborator; REMAP-CAP investigator</div>
-      </div>
-
-      <div class="pub">
-        <div class="year">2023</div>
-        <div class="title">Critical Care Services in Bagmati Province of Nepal: A Cross Sectional Survey (Wellcome Open Research)</div>
-        <div class="role">Role: Co-author</div>
-      </div>
-
-      <p style="margin: 12px 0 0; color: var(--muted); font-size: 13px;">
-        Tip: You can add full citations + DOI links later (your CV already lists them).
-      </p>
-    </section> 
-    
-
-    <!-- Conferences -->
-    <section class="card section" id="conferences">
-      <div class="sectionHeader">
-        <h3>Conferences & Research in Progress</h3>
-        <p>Highlights</p>
-      </div>
-
-      <div class="grid2">
-        <div class="item">
-          <h4>Conferences (Selected)</h4>
-          <ul>
-            <li>Social health insurance scheme as a way to universal health coverage: evidence from Nepal — CUGH 2021 Virtual Conference (co-author).</li>
-            <li>Health related quality of life among ICU survivors over 1 year after discharge — RFCCN-SAARC / CCAN 2019 (co-author).</li>
-            <li>Early ICU readmission: Incidence, Etiology and Outcome — RFCCN-SAARC / CCAN 2019 (co-author).</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <h4>Research in Progress</h4>
-          <ul>
-            <li>Comparison of clinical characteristics and outcomes between COVID-19 survivors and non-survivors (co-author).</li>
-            <li>Empiric gram negative antibiotics usage among critically ill patients across 14 ICUs of Nepal (co-author).</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills / Training -->
-    <section class="card section" id="skills">
-      <div class="sectionHeader">
-        <h3>Training & Languages</h3>
-        <p>Professional development</p>
-      </div>
-
-      <div class="grid2">
-        <div class="item">
-          <h4>Training</h4>
-          <div class="chips">
-            <span class="chip">Basic Life Support (BLS)</span>
-            <span class="chip">Human Resource & Admin Skills</span>
-            <span class="chip">Power BI: Data Visualization</span>
-            <span class="chip">Health Research Methodology (10.5 credit)</span>
-            <span class="chip">Good Clinical Practice (GCP) courses</span>
-          </div>
-        </div>
-
-        <div class="item">
-          <h4>Languages</h4>
-          <div class="chips">
-            <span class="chip">Nepali — Native</span>
-            <span class="chip">English — Fluent</span>
-            <span class="chip">Hindi — Fluent</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="footer">
-      <p>© <span id="yr"></span> Subekshya Luitel • Kathmandu, Nepal</p>
-      <p style="margin-top: 6px;">Built with GitHub Pages • Single-file HTML</p>
-    </div>
-
-  </div>
+  </footer>
 
   <script>
-    document.getElementById("yr").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
 
 
 
